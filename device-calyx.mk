@@ -8,3 +8,5 @@ PRODUCT_COPY_FILES += \
 # For Google Camera
 PRODUCT_COPY_FILES += \
     device/google/lynx/the_experiences.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/the_experiences.xml
+
+TARGET_PREBUILT_KERNEL := device/google/lynx-kernel/Image.lz4
