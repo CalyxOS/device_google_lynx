@@ -18,3 +18,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := google/lynx/lynx:14/UP1A.231005.007/10754064:user/release-keys
 
 PRODUCT_RESTRICT_VENDOR_FILES := false
+
+$(call inherit-product, vendor/google/lynx/lynx-vendor.mk)
