@@ -16,6 +16,24 @@
       "message": "Will this also apply to other devices?",
       "revId": "de3d055450558ea2dabcbd159d7cbe70f427c9e4",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ea6888f_d948b02b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-11-10T20:17:31Z",
+      "side": 1,
+      "message": "All other pixels with udfps have this commit, only lynx is missing it.",
+      "parentUuid": "67b491b3_a33c9773",
+      "revId": "de3d055450558ea2dabcbd159d7cbe70f427c9e4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
