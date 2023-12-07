@@ -23,6 +23,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     HbmSVManagerOverlayLynx
 
+# Pixel Camera Services / Camera extensions
+PRODUCT_COPY_FILES += \
+    device/google/lynx/permissions/permissions_com.google.android.apps.camera.services.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/permissions_com.google.android.apps.camera.services.xml
+
 TARGET_PREBUILT_KERNEL := device/google/lynx-kernel/Image.lz4
 
 # wireless_charger HAL service
