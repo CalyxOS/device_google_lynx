@@ -1,5 +1,9 @@
 DEVICE_PACKAGE_OVERLAYS += device/google/lynx/overlay-calyx
 
+# ANGLE - Almost Native Graphics Layer Engine
+PRODUCT_PACKAGES += \
+    ANGLE
+
 # EUICC
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml \
@@ -62,9 +66,9 @@ PRODUCT_PACKAGES += \
 
 # Confirmation UI
 PRODUCT_PACKAGES += \
-    android.hardware.confirmationui@1.0.vendor:64 \
     android.hardware.confirmationui-V1-ndk.vendor:64 \
     android.hardware.confirmationui-lib.trusty:64 \
+    android.hardware.confirmationui@1.0.vendor:64 \
     libteeui_hal_support.vendor:64
 
 # Graphics
@@ -83,6 +87,10 @@ PRODUCT_PACKAGES += \
     android.hardware.identity-V5-ndk.vendor:64 \
     android.hardware.identity-support-lib.vendor:64 \
     android.hardware.identity_credential.xml
+
+# Json
+PRODUCT_PACKAGES += \
+    libjson:64
 
 # Nos
 PRODUCT_PACKAGES += \
@@ -113,6 +121,7 @@ PRODUCT_PACKAGES += \
 # Trusty
 PRODUCT_PACKAGES += \
     android.trusty.stats.nw.setter-cpp.vendor:64 \
+    lib_sensor_listener:64 \
     libbinder_trusty:64 \
     libtrusty_metrics:64
 
@@ -125,11 +134,11 @@ PRODUCT_PACKAGES += \
     android.frameworks.stats-V1-cpp.vendor:64 \
     android.frameworks.stats-V1-ndk.vendor:32 \
     android.hardware.authsecret-V1-ndk.vendor:64 \
-    android.hardware.biometrics.common-V2-ndk.vendor:64 \
     android.hardware.biometrics.common-V3-ndk.vendor:64 \
     android.hardware.biometrics.face-V3-ndk.vendor:64 \
     android.hardware.biometrics.face@1.0.vendor:64 \
-    android.hardware.biometrics.fingerprint-V2-ndk.vendor:64 \
+    android.hardware.biometrics.fingerprint-V3-ndk.vendor:64 \
+    android.hardware.gnss-V3-ndk.vendor:64 \
     android.hardware.health-V1-ndk.vendor \
     android.hardware.input.common-V1-ndk.vendor:64 \
     android.hardware.input.processor-V1-ndk.vendor:64 \
@@ -138,6 +147,10 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0.vendor:64 \
     android.hardware.keymaster@4.1.vendor:64 \
     android.hardware.neuralnetworks-V4-ndk.vendor:64 \
+    android.hardware.neuralnetworks@1.0.vendor:64 \
+    android.hardware.neuralnetworks@1.1.vendor:64 \
+    android.hardware.neuralnetworks@1.2.vendor:64 \
+    android.hardware.neuralnetworks@1.3.vendor:64 \
     android.hardware.oemlock-V1-ndk.vendor:64 \
     android.hardware.power@1.0.vendor:64 \
     android.hardware.power@1.1.vendor:64 \
@@ -159,13 +172,13 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.4.vendor \
     android.hardware.radio@1.5.vendor \
     android.hardware.radio@1.6.vendor \
+    android.hardware.thermal-V1-ndk.vendor:32 \
     android.hardware.thermal@1.0.vendor:32 \
     android.hardware.thermal@2.0.vendor:32 \
-    android.hardware.thermal-V1-ndk.vendor:32 \
     android.hardware.weaver-V2-ndk.vendor:64 \
     android.hardware.wifi-V1-ndk.vendor:64 \
     com.google.hardware.pixel.display-V4-ndk.vendor:64 \
-    com.google.hardware.pixel.display-V6-ndk.vendor
+    com.google.hardware.pixel.display-V9-ndk.vendor
 
 # Properties
 TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
