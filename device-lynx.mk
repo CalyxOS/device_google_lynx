@@ -30,8 +30,7 @@ DEVICE_PACKAGE_OVERLAYS += device/google/lynx/lynx/overlay
 
 include device/google/lynx/audio/lynx/audio-tables.mk
 include device/google/gs201/device-shipping-common.mk
-include hardware/google/pixel/vibrator/cs40l26/device.mk
-include device/google/gs-common/touch/gti/gti.mk
+include device/google/gs-common/touch/gti/predump_gti.mk
 include device/google/gs-common/wlan/dump.mk
 
 # go/lyric-soong-variables
@@ -340,5 +339,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.quick_start.device_id=lynx
 
 # Bluetooth device id
+# Raven: 0x410B
 PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.device_id.product_id=20491
+    bluetooth.device_id.product_id=16651
+
+# ETM
+ifneq (,$(RELEASE_ETM_IN_USERDEBUG_ENG))
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+$(call inherit-product-if-exists, device/google/common/etm/device-userdebug-modules.mk)
+endif
+endif
