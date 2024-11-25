@@ -16,6 +16,24 @@
       "message": "Unrelated but also unused. Fine to include.",
       "revId": "c18798aae9ab4369f004e657de05b709ca815f66",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f5b372e_dccc1360",
+        "filename": "lynx/osaifu-keitai.patch",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-11-25T17:28:53Z",
+      "side": 1,
+      "message": "I removed it from the other devices but forgot about it here. Will fix later with the remaining devices",
+      "parentUuid": "30225115_9444b130",
+      "revId": "c18798aae9ab4369f004e657de05b709ca815f66",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
