@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "30225115_9444b130",
+        "filename": "lynx/osaifu-keitai.patch",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-25T16:54:13Z",
+      "side": 1,
+      "message": "Unrelated but also unused. Fine to include.",
+      "revId": "c18798aae9ab4369f004e657de05b709ca815f66",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
