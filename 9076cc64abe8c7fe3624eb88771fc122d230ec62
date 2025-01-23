@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dddef4d5_e37c22b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2025-01-23T18:19:34Z",
+      "side": 1,
+      "message": "Wi-Fi Calling with Verizon works correctly, as it did before, for incoming/outgoing calls and SMS. (I do not have other applicable active SIMs to test.)",
+      "revId": "9076cc64abe8c7fe3624eb88771fc122d230ec62",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
