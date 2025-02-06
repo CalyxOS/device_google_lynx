@@ -30,6 +30,7 @@ endif
 
 BOARD_USES_GENERIC_AUDIO := true
 USES_DEVICE_GOOGLE_LYNX := true
+$(call soong_config_set_bool,prebuilts_wlan,USES_DEVICE_GOOGLE_LYNX,$(USES_DEVICE_GOOGLE_LYNX))
 
 # Enable load module in parallel
 BOARD_BOOTCONFIG += androidboot.load_modules_parallel=true
