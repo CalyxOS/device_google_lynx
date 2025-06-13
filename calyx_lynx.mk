@@ -22,8 +22,8 @@ PRODUCT_MODEL := Pixel 7a
 PRODUCT_NAME := calyx_$(DEVICE_CODENAME)
 
 PRODUCT_BUILD_PROP_OVERRIDES := \
-    BuildDesc="lynx-user 15 BP1A.250505.005.B1 13277630 release-keys" \
-    BuildFingerprint=google/lynx/lynx:15/BP1A.250505.005.B1/13277630:user/release-keys \
+    BuildDesc="lynx-user 16 BP2A.250605.031.A2 13578606 release-keys" \
+    BuildFingerprint=google/lynx/lynx:16/BP2A.250605.031.A2/13578606:user/release-keys \
     DeviceProduct=$(DEVICE_CODENAME)
 
 PRODUCT_RESTRICT_VENDOR_FILES := false
