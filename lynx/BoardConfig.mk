@@ -16,16 +16,7 @@
 
 TARGET_BOARD_INFO_FILE := device/google/lynx/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := lynx
-
-ifdef PHONE_CAR_BOARD_PRODUCT
-        include vendor/auto/embedded/products/$(PHONE_CAR_BOARD_PRODUCT)/BoardConfig.mk
-else
-        TARGET_SCREEN_DENSITY := 420
-endif
-
-BOARD_USES_GENERIC_AUDIO := true
-USES_DEVICE_GOOGLE_LYNX := true
-$(call soong_config_set_bool,prebuilts_wlan,USES_DEVICE_GOOGLE_LYNX,$(USES_DEVICE_GOOGLE_LYNX))
+TARGET_SCREEN_DENSITY := 420
 
 # Enable load module in parallel
 BOARD_BOOTCONFIG += androidboot.load_modules_parallel=true
@@ -35,7 +26,6 @@ BOARD_KERNEL_CMDLINE += fips140.load_sequential=1
 BOARD_KERNEL_CMDLINE += exynos_drm.load_sequential=1
 
 include device/google/gs201/BoardConfig-common.mk
-include device/google/gs-common/check_current_prebuilt/check_current_prebuilt.mk
 include device/google/lynx/sepolicy/lynx-sepolicy.mk
 include device/google/gs201/wifi/qcom/BoardConfig-wifi.mk
 

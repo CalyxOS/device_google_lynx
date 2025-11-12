@@ -14,10 +14,6 @@
 # limitations under the License.
 #
 
-DEVICE_USES_NO_TRUSTY := true
-USE_SWIFTSHADER := true
-BOARD_USES_SWIFTSHADER := true
-
 $(call inherit-product, device/google/gs201/aosp_common.mk)
 $(call inherit-product, device/google/lynx/device-lynx.mk)
 
