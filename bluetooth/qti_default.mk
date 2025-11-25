@@ -42,13 +42,7 @@ DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/lynx/bluetooth/device_
 
 BOARD_SEPOLICY_DIRS += device/google/lynx/sepolicy/bluetooth
 
-# IBluetoothHci @1.1 / @1.0
-PRODUCT_PACKAGES += android.hardware.bluetooth@1.1-impl-qti
-# IBluetoothSar @1.1 / @1.0
-PRODUCT_PACKAGES += hardware.google.bluetooth.sar@1.1-impl
 PRODUCT_PACKAGES += \
-	android.hardware.bluetooth@1.0-service-qti \
-	hardware.google.bluetooth.bt_channel_avoidance@1.0-impl \
 	android.hardware.bluetooth.prebuilt.xml \
 	android.hardware.bluetooth_le.prebuilt.xml
 
