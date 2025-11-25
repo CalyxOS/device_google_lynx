@@ -14,8 +14,13 @@ DEVICE_PACKAGE_OVERLAYS += device/google/lynx/lynx/overlay
 DEVICE_PACKAGE_OVERLAYS += device/google/lynx/overlay-lineage
 
 include device/google/gs201/device-shipping-common.mk
-include device/google/gs-common/touch/gti/predump_gti.mk
-include device/google/gs-common/wlan/dump.mk
+
+# Touch
+PRODUCT_PACKAGES += \
+    dump_touch.sh \
+    predump_gti0.sh \
+    predump_touch.sh \
+    touch_gti_ical
 
 # Recovery files
 PRODUCT_COPY_FILES += \
@@ -45,7 +50,7 @@ PRODUCT_PACKAGES += \
 	NfcOverlayLynx
 
 # Shared Modem Platform
-include device/google/gs-common/modem/modem_svc_sit/shared_modem_platform.mk
+DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs-common/modem/modem_svc_sit/compatibility_matrix.xml
 
 # SecureElement
 PRODUCT_PACKAGES += \
@@ -237,4 +242,4 @@ PRODUCT_PACKAGES += \
     libwifi-hal-ctrl:64
 
 # Wireless charging
-include device/google/gs-common/wireless_charger/wireless_charger.mk
+DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs-common/wireless_charger/compatibility_matrix.xml
