@@ -24,7 +24,7 @@ PRODUCT_PACKAGES += \
 
 # Recovery files
 PRODUCT_COPY_FILES += \
-        device/google/lynx/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.lynx.rc
+    device/google/lynx/recovery/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.lynx.rc
 
 # Media Performance Class 13
 PRODUCT_PROPERTY_OVERRIDES += ro.odm.build.media_performance_class=33
