@@ -15,13 +15,6 @@ DEVICE_PACKAGE_OVERLAYS += device/google/lynx/overlay-lineage
 
 include device/google/gs201/device-shipping-common.mk
 
-# Touch
-PRODUCT_PACKAGES += \
-    dump_touch.sh \
-    predump_gti0.sh \
-    predump_touch.sh \
-    touch_gti_ical
-
 # Recovery files
 PRODUCT_COPY_FILES += \
     device/google/lynx/recovery/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.lynx.rc
@@ -63,11 +56,6 @@ PRODUCT_COPY_FILES += \
 
 DEVICE_MANIFEST_FILE += \
 	device/google/lynx/nfc/manifest_se.xml
-
-# PowerStats HAL
-PRODUCT_SOONG_NAMESPACES += \
-    device/google/lynx/powerstats \
-    device/google/lynx
 
 # Bluetooth HAL and Pixel extension
 include device/google/lynx/bluetooth/qti_default.mk
@@ -202,10 +190,6 @@ PRODUCT_PACKAGES += \
     libEGL_angle \
     libGLESv1_CM_angle \
     libGLESv2_angle
-
-# Dumpstate
-PRODUCT_PACKAGES += \
-    dump_gsc.sh
 
 # EUICC
 PRODUCT_COPY_FILES += \
