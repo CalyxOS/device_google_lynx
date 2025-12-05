@@ -24,11 +24,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
 	bluetooth.server.automatic_turn_on=true
 
-# Bluetooth HAL and Pixel extension
-DEVICE_MANIFEST_FILE += \
-	device/google/lynx/bluetooth/manifest_bluetooth.xml
-DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/lynx/bluetooth/device_framework_matrix_product.xml
-
+# Bluetooth HAL
 BOARD_SEPOLICY_DIRS += device/google/lynx/sepolicy/bluetooth
 
 PRODUCT_PACKAGES += \
