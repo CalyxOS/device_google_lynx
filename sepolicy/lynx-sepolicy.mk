@@ -1,6 +1,7 @@
 # sepolicy that are shared among devices using whitechapel
 BOARD_SEPOLICY_DIRS += device/google/lynx/sepolicy/vendor
 BOARD_SEPOLICY_DIRS += device/google/lynx/sepolicy/tracking_denials
+BOARD_SEPOLICY_DIRS += device/google/lynx/sepolicy/bluetooth
 
 BOARD_VENDOR_SEPOLICY_DIRS += device/google/gs-common/modem/modem_svc_sit/sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += device/google/gs-common/touch/gti/ical/sepolicy
