@@ -1,9 +1,9 @@
 type cnss-daemon, domain;
 type cnss-daemon_exec, exec_type, file_type, vendor_file_type;
 
-init_daemon_domain(cnss-daemon)
-
 net_domain(cnss-daemon)
+
+init_daemon_domain(cnss-daemon)
 
 allow cnss-daemon proc_net:file rw_file_perms;
 allow cnss-daemon self:{ netlink_generic_socket qipcrtr_socket } create_socket_perms_no_ioctl;
