@@ -10,9 +10,6 @@ TARGET_KERNEL_DEVICE := lynx
 TARGET_KERNEL_DIR := device/google/$(TARGET_KERNEL_DEVICE)-kernels/$(TARGET_LINUX_KERNEL_VERSION)
 TARGET_KERNEL_PLATFORM_SOURCE := google/gs-$(TARGET_LINUX_KERNEL_VERSION)
 
-DEVICE_PACKAGE_OVERLAYS += device/google/lynx/lynx/overlay
-DEVICE_PACKAGE_OVERLAYS += device/google/lynx/overlay-lineage
-
 include device/google/gs201/device-shipping-common.mk
 
 # Recovery files
@@ -28,8 +25,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml
 
 PRODUCT_PACKAGES += \
-	android.hardware.nfc-service.st \
-	NfcOverlayLynx
+	android.hardware.nfc-service.st
 
 # SecureElement
 PRODUCT_PACKAGES += \
@@ -50,25 +46,9 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom/wlan \
     hardware/qcom/wlan/wcn6740
 
-# WiFi Overlay
-PRODUCT_PACKAGES += \
-	WifiOverlay2023Mid
-
-# Hide cutout overlays
-PRODUCT_PACKAGES += \
-    NoCutoutOverlay \
-    AvoidAppsInCutoutOverlay
-
 # Device features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
-
-# SKU specific RROs
-PRODUCT_PACKAGES += \
-    SettingsOverlayG82U8 \
-    SettingsOverlayG0DZQ \
-    SettingsOverlayGHL1X \
-    SettingsOverlayGWKK3
 
 # ANGLE - Almost Native Graphics Layer Engine
 PRODUCT_PACKAGES += \
@@ -78,9 +58,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
 
-PRODUCT_PACKAGES += \
-    EuiccSupportPixelOverlay
-
 # Fingerprint
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -89,9 +66,26 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors-V2-ndk.vendor:64
 
-# HBM
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    device/google/lynx/overlay-lineage
+
 PRODUCT_PACKAGES += \
-    HbmSVManagerOverlayLynx
+    DMServiceOverlayProductGs201 \
+    DMServiceOverlayVendorLynx \
+    FrameworkResOverlayProductLynx \
+    FrameworkResOverlayVendorLynx \
+    HbmSVManagerOverlayProductLynx \
+    PixelNfcOverlayLynx \
+    PixelWifiOverlay2023_T6proGs201 \
+    PixelWifiOverlay2023_midyearLynx \
+    SafetyRegulatoryInfoOverlayProductLynx \
+    SettingsGoogleLynxOverlay \
+    SettingsOverlayG0DZQ \
+    SettingsOverlayG82U8 \
+    SettingsOverlayGHL1X \
+    SettingsOverlayGWKK3 \
+    SystemUIGoogleOverlayVendorLynx
 
 # Init
 PRODUCT_PACKAGES += \
