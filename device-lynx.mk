@@ -28,8 +28,6 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    DMServiceOverlayProductGs201 \
-    DMServiceOverlayVendorLynx \
     FrameworkResOverlayProductLynx \
     FrameworkResOverlayVendorLynx \
     HbmSVManagerOverlayProductLynx \
