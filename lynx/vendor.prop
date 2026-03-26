@@ -18,6 +18,9 @@ persist.vendor.camera.start_cpu_throttling_at_moderate_thermal=1
 # DCK
 ro.gms.dck.eligible_wcc=2
 
+# Device family
+ro.build.device_family=P10C10L10
+
 # Display
 ro.surface_flinger.set_idle_timer_ms=1000
 vendor.primarydisplay.lhbm.frames_to_reach_peak_brightness=2

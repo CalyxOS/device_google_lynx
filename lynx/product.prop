@@ -11,8 +11,5 @@ persist.bluetooth.a2dp_offload.disabled=false
 ro.bluetooth.a2dp_offload.supported=true
 ro.bluetooth.leaudio_switcher.supported=false
 
-# Device family
-ro.build.device_family=P10C10L10
-
 # Quick start
 ro.quick_start.device_id=lynx
